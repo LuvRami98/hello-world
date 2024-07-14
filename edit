@@ -1,0 +1,38 @@
+for (int i = 1; i <= 100; i++)
+{
+    Console.WriteLine(i);
+    if (i % 15 == 0)
+    {
+        Console.WriteLine("FizzBuzz");
+    }
+    else if (i % 3 == 0)
+    {
+        Console.WriteLine("Buzz");
+    }
+    else if (i % 5 == 0)
+    {
+        Console.WriteLine("Fizz");
+    }
+}
+
+for (int i = 101; i <= 200; i++)
+{
+    Console.WriteLine(i);
+    if (IsDivisibleBy(i, 3) && IsDivisibleBy(i, 5))
+    {
+        Console.WriteLine("FizzBuzz");
+    }
+    else if (IsDivisibleBy(i, 3))
+    {
+        Console.WriteLine("Buzz");
+    }
+    else if (IsDivisibleBy(i, 5))
+    {
+        Console.WriteLine("Fizz");
+    }
+}
+
+static bool IsDivisibleBy(int number, int divisor)
+{
+    return number % divisor == 0;
+}
